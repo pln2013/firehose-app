@@ -5,7 +5,9 @@
 		Lesson: <%=pic.lesson %>
 		<br/>
 		<h2>
-		Image: <%=image_tag pic.image %>
+		<%= link_to pic_path(pic) do %> 
+		<%=image_tag pic.image %>
+		<% end %>
 		<br/>
 		<h2>
 		Emotion: <%= pic.emotion %>
