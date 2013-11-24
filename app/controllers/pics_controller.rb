@@ -3,8 +3,12 @@ class PicsController < ApplicationController
 	def create
 		# Pic.create(:lesson => 1,...)
 		@pic = Pic.create( pic_params )
-
+		
+		if @pic.valid? 
 		redirect_to pics_path
+		else
+		render :new, :status => :unprocessable_entity	
+		end
 	end
 
 	def new
