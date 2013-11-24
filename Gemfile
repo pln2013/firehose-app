@@ -49,3 +49,5 @@ gem "twitter-bootstrap-rails"
 gem 'simple_form'
 
 gem 'carrierwave'
+
+gem "fog", "~> 1.3.1"
